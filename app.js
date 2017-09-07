@@ -25,5 +25,27 @@ function questionOne() {
 questionOne();
 
 function questionTwo() {
-
+  var romanticComedies = prompt('Do I like romantic comedies?').toUpperCase();
+  console.log('Does Dumb and Dumber Count?');
+  if (romanticComedies === 'YES' || romanticComedies === 'Y') {
+    alert(username + ' ,no. I do not. Unless you consider Dumb and Dumber romantic?');
+  } else {
+    alert(username + ' , interesting choice. You are correct.');
+    correctCounter += 1;
+  }
 };
+questionTwo();
+
+function questionThree() {
+  var freeTime = prompt('In my precious free time would I read a book instead of watch a movie?').toUpperCase();
+  console.log('freeTime');
+  if (freeTime === 'YES' || freeTime === 'Y') {
+    alert('You are good at reading people. Well done!');
+    correctCounter += 1;
+  } else {
+    alert('I do enjoy movies but most of the time I am eager to get back to my book much more.');
+  }
+};
+questionThree();
+
+console.log(correctCounter);
