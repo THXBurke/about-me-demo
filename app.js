@@ -23,3 +23,7 @@ function questionOne() {
   }
 };
 questionOne();
+
+function questionTwo() {
+
+};
