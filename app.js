@@ -26,7 +26,7 @@ questionOne();
 
 function questionTwo() {
   var romanticComedies = prompt('Do I like romantic comedies?').toUpperCase();
-  console.log('Does Dumb and Dumber Count?');
+  console.log('Does Dumb and Dumber Count?: ' + romanticComedies);
   if (romanticComedies === 'YES' || romanticComedies === 'Y') {
     alert(username + ' ,no. I do not. Unless you consider Dumb and Dumber romantic?');
   } else {
@@ -38,7 +38,7 @@ questionTwo();
 
 function questionThree() {
   var freeTime = prompt('In my precious free time would I read a book instead of watch a movie?').toUpperCase();
-  console.log('freeTime');
+  console.log('freeTime is: ' + freeTime);
   if (freeTime === 'YES' || freeTime === 'Y') {
     alert('You are good at reading people. Well done!');
     correctCounter += 1;
@@ -49,3 +49,15 @@ function questionThree() {
 questionThree();
 
 console.log(correctCounter);
+
+function questionFour() {
+  for(var i = 0; i <= 3; i++);
+  var numKids = prompt('Can you guess how many children I have?').toUpperCase();
+  console.log('numKids is: ' + numKids);
+  if (numKids === 3) {
+    alert('Yes! Three children!');
+    correctCounter += 1;
+  } else if (numkids < 3) {
+    alert('');
+  }
+}
