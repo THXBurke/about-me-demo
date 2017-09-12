@@ -14,7 +14,7 @@ function questionOne() {
   var hometown = prompt('Yes or No, are one of these places my hometown? Washington D.C., Bow-Edison Washington or Vancouver Canada?').toUpperCase();
   console.log('hometown is: ' + hometown);
   if (hometown === 'YES' || hometown === 'Y') {
-    alert(username + ' ,You are correct! I\'m from little ol\' Bow-Edison in Skagit Valley north of Seattle about one hour.');
+    alert(username + ' , you are correct! I\'m from little ol\' Bow-Edison in Skagit Valley north of Seattle about one hour.');
     correctCounter += 1;
   } else if (hometown === 'NO' || hometown === 'N') {
     alert(username + ' ,you are incorrect! I\'m from little ol\' Bow-Edison in Skagit Valley north of Seattle about one hour. Let\'s try again.');
@@ -28,7 +28,7 @@ function questionTwo() {
   var romanticComedies = prompt('Do I like romantic comedies?').toUpperCase();
   console.log('Does Dumb and Dumber Count?: ' + romanticComedies);
   if (romanticComedies === 'YES' || romanticComedies === 'Y') {
-    alert(username + ' ,no. I do not. Unless you consider Dumb and Dumber romantic?');
+    alert(username + ',no. I do not. Unless you consider Dumb and Dumber romantic?');
   } else {
     alert(username + ' , interesting choice. You are correct.');
     correctCounter += 1;
@@ -50,14 +50,25 @@ questionThree();
 
 console.log(correctCounter);
 
+//showing a counter for guesses using a for loop
+
 function questionFour() {
-  for(var i = 0; i <= 3; i++);
-  var numKids = prompt('Can you guess how many children I have?').toUpperCase();
-  console.log('numKids is: ' + numKids);
-  if (numKids === 3) {
-    alert('Yes! Three children!');
-    correctCounter += 1;
-  } else if (numkids < 3) {
-    alert('');
+  while ( numKids <= 3); {
+    var numKids = parseInt(prompt('Can you guess how many children I have?'));
+    console.log('numKids is: ' + numKids);
+    if (numKids === 3) {
+      alert('Yes! Three children!');
+      correctCounter += 1;
+    } else if (numKids < 3) {
+      alert('Nope, guess higher.');
+    } else if (numKids > 3) {
+      alert('Nope, guess lower.');
+    } else {
+      alert('Did you enter an number?');
+    }
+  }
+  {
+    alert('I have three very interesting people I have the pleasure of Mothering.');
   }
 }
+questionFour();
