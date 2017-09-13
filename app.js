@@ -65,10 +65,41 @@ function questionFour() {
       alert('Did ya enter a number?');
     }
     if (i >= 3) {
-      alert('I have three little darlings...here we are in Ireland.');
+      alert('I have three little darlings.');
     }
   }
 };
 questionFour();
 
+//show how to use array and while loop
+
+function vacation() {
+  alert('Last question. You get five tries.');
+  var vacationCities = ['VANCOUVER', 'VICTORIA', 'DUBLIN', 'LONDON'];
+  var guesses = 0;
+  var correctGuess = false;
+
+  while (guesses < 5 && correctGuess === false) {
+    var vacationQuestion = prompt('Can you guess a city I went to on vacation last summer? Here is a clue. The beginning letter is V, D or L.').toUpperCase();
+    console.log(' vacation guess is: ' + vacationQuestion);
+    for (var i = 0; i < vacationCities.length; i++) {
+      if (vacationQuestion === vacationCities[i]) {
+        correctCounter += 1;
+        correctGuess = true;
+      }
+    }
+    guesses++;
+
+    if (correctGuess === true) {
+      alert('Correct! We went to Vancouver, Victoria, Explored Ireland and London. We also camped in the North Cascades and visited friends on the San Juan Islands. Fun summer! Work hard play hard...');
+    } else {
+      alert('Nope, guess again.');
+    }
+  }
+
+};
+
+vacation();
+
 console.log(correctCounter);
+alert('You answered ' + correctCounter + ' out of five questions correct. Thanks for playing, ' + username + ' .');
