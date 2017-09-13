@@ -51,7 +51,7 @@ questionThree();
 //showing a counter for guesses using a for loop
 
 function questionFour() {
-  for (var i = 0; i < 4; i++) {
+  for (var i = 0; i < 3; i++) {
     var numKids = parseInt(prompt('Can you guess how many children I have?'));
     console.log('numKids is: ' + numKids);
     if (numKids < 3) {
@@ -73,7 +73,7 @@ questionFour();
 
 //show how to use array and while loop
 
-function vacation() {
+function questionFive() {
   alert('Last question. You get five tries.');
   var vacationCities = ['VANCOUVER', 'VICTORIA', 'DUBLIN', 'LONDON'];
   var guesses = 0;
@@ -84,7 +84,6 @@ function vacation() {
     console.log(' vacation guess is: ' + vacationQuestion);
     for (var i = 0; i < vacationCities.length; i++) {
       if (vacationQuestion === vacationCities[i]) {
-        correctCounter += 1;
         correctGuess = true;
       }
     }
@@ -92,6 +91,7 @@ function vacation() {
 
     if (correctGuess === true) {
       alert('Correct! We went to Vancouver, Victoria, Explored Ireland and London. We also camped in the North Cascades and visited friends on the San Juan Islands. Fun summer! Work hard play hard...');
+      correctCounter += 1;
     } else {
       alert('Nope, guess again.');
     }
@@ -99,7 +99,7 @@ function vacation() {
 
 };
 
-vacation();
+questionFive();
 
-console.log(correctCounter);
+console.log('correct guesses: ' + correctCounter);
 alert('You answered ' + correctCounter + ' out of five questions correct. Thanks for playing, ' + username + ' .');
