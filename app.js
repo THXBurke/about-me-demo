@@ -6,7 +6,7 @@ var username;
 function username() {
   username = prompt('What is your name?');
   console.log('This user is: ' + username);
-  alert('Hi ' + username + ', thanks for being willing to play my game. Things will work best if you answer with Yes/No or Y/N (for yes or no questions.)');
+  alert('Hi ' + username + ', thanks for playing my game. Things will work best if you answer with Yes/No or Y/N (for yes or no questions.)');
 }
 username();
 
@@ -28,9 +28,9 @@ function questionTwo() {
   var romanticComedies = prompt('Do I like romantic comedies?').toUpperCase();
   console.log('Does Dumb and Dumber Count?: ' + romanticComedies);
   if (romanticComedies === 'YES' || romanticComedies === 'Y') {
-    alert(username + ',no. I do not. Unless you consider Dumb and Dumber romantic?');
+    alert(username + ', no. I do not. Unless you consider Dumb and Dumber romantic?');
   } else {
-    alert(username + ' , interesting choice. You are correct.');
+    alert(username + ' , correct, not my favorite.');
     correctCounter += 1;
   }
 };
@@ -40,7 +40,7 @@ function questionThree() {
   var freeTime = prompt('In my precious free time would I read a book instead of watch a movie?').toUpperCase();
   console.log('freeTime is: ' + freeTime);
   if (freeTime === 'YES' || freeTime === 'Y') {
-    alert('You are good at reading people. Well done!');
+    alert('You are good at reading people.');
     correctCounter += 1;
   } else {
     alert('I do enjoy movies but most of the time I am eager to get back to my book much more.');
@@ -48,27 +48,27 @@ function questionThree() {
 };
 questionThree();
 
-console.log(correctCounter);
-
 //showing a counter for guesses using a for loop
 
 function questionFour() {
-  while ( numKids <= 3); {
+  for (var i = 0; i < 4; i++) {
     var numKids = parseInt(prompt('Can you guess how many children I have?'));
     console.log('numKids is: ' + numKids);
-    if (numKids === 3) {
-      alert('Yes! Three children!');
-      correctCounter += 1;
-    } else if (numKids < 3) {
-      alert('Nope, guess higher.');
+    if (numKids < 3) {
+      alert('More than that...');
     } else if (numKids > 3) {
-      alert('Nope, guess lower.');
+      alert('Nope, less...');
+    } else if (numKids === 3) {
+      alert('Correct!');
+      correctCounter += 1;
     } else {
-      alert('Did you enter an number?');
+      alert('Did ya enter a number?');
+    }
+    if (i >= 3) {
+      alert('I have three little darlings...here we are in Ireland.');
     }
   }
-  {
-    alert('I have three very interesting people I have the pleasure of Mothering.');
-  }
-}
+};
 questionFour();
+
+console.log(correctCounter);
